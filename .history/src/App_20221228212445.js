@@ -6,7 +6,7 @@ function App() {
   const user = true ;
 
   return (
-    <div className="App bg-black">
+    <div className="App">
         {
           !user ? <LoginScreen /> : <Homescreen />
         }

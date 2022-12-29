@@ -3,12 +3,12 @@ import LoginScreen from "./Screen/LoginScreen";
 
 
 function App() {
-  const user = true ;
+  const user = null ;
 
   return (
-    <div className="App bg-black">
+    <div className="App">
         {
-          !user ? <LoginScreen /> : <Homescreen />
+          user ? <LoginScreen /> : <Homescreen />
         }
     </div>
   );
