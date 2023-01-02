@@ -5,21 +5,12 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
   const base_url = "https://image.tmdb.org/t/p/original/";
 
-  // async function fetchData(){
-  //   const result = await axios.get(fetchUrl) ;
-  //   console.log(result)
+  async function fetchData(){
+    const request = axios
 
-  // }
+  }
 
-  useEffect(() => {
-    async function fetchData(){
-      const result = await axios.get(fetchUrl) ;
-      console.log(result)
-    
-    }
-
-    fetchData() ;
-  }, [fetchUrl]);
+  useEffect(() => {}, [fetchUrl]);
 
   return (
     <div className=" bg-black">

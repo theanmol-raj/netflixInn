@@ -8,19 +8,15 @@ function Banner() {
     async function fetchData(){
       const result = await axios.get() ;
       setMovies(
-        result [Math.floor(Math.random() * result.length -1 )]
+        result [
+          Math.random() * result.length
+        ]
       )
     
     }
 
     fetchData() ;
   },[])
-
-  function truncate(description , n){
-    return description?.length > n ? description.substr(0,n) : description ;
-
-  }
-
 
   return (
     <div className=" bgbanner bg-no-repeat bg-cover bg-center">

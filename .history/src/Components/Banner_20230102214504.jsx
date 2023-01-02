@@ -17,7 +17,7 @@ function Banner() {
   },[])
 
   function truncate(description , n){
-    return description?.length > n ? description.substr(0,n) : description ;
+    return description?.length > n ? description.substr
 
   }
 

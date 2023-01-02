@@ -16,12 +16,6 @@ function Banner() {
     fetchData() ;
   },[])
 
-  function truncate(description , n){
-    return description?.length > n ? description.substr(0,n) : description ;
-
-  }
-
-
   return (
     <div className=" bgbanner bg-no-repeat bg-cover bg-center">
       <div className="h-[450px] absolute  w-full bg-gradient-to-t from-red-500 via-transparent to-transparent " />

@@ -1,25 +1,11 @@
-import axios from "../axios";
 import React, { useEffect, useState } from "react";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
+
   const base_url = "https://image.tmdb.org/t/p/original/";
 
-  // async function fetchData(){
-  //   const result = await axios.get(fetchUrl) ;
-  //   console.log(result)
-
-  // }
-
-  useEffect(() => {
-    async function fetchData(){
-      const result = await axios.get(fetchUrl) ;
-      console.log(result)
-    
-    }
-
-    fetchData() ;
-  }, [fetchUrl]);
+  useEffect(() => {}, [fetchUrl]);
 
   return (
     <div className=" bg-black">
