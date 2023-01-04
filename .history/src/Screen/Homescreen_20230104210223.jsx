@@ -6,9 +6,7 @@ import requests from '../Requests'
 import axios from '../axios'
 
 function Homescreen() {
-
-  
-
+  console.log("nbuvy")
 
   return (
     <div>

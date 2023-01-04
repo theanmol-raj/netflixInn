@@ -3,19 +3,17 @@ import React, { useEffect, useState } from "react";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
-  const base_url = "https://image.tmdb.org/t/p/original";
+  const base_url = "https://image.tmdb.org/t/p/original/";
 
   useEffect(() => {
     async function fetchData(){
       const result = await axios.get(fetchUrl) ;
-      // console.log(result )
+      console.log(result )
       return result
     }
 
     fetchData() ;
   }, [fetchUrl]);
-
-  // console.log(movies)
 
   return (
     <div className=" bg-black">

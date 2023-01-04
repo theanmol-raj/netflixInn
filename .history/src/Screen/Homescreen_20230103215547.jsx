@@ -3,11 +3,12 @@ import Banner from '../Components/Banner'
 import Navbar from '../Components/Navbar'
 import Row from '../Components/Row'
 import requests from '../Requests'
-import axios from '../axios'
+import axios from 'axios'
 
 function Homescreen() {
-
-  
+  useEffect(()=>{
+    axios.get()
+  } ,[])
 
 
   return (

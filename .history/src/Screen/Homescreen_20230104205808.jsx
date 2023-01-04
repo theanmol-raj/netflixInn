@@ -6,8 +6,9 @@ import requests from '../Requests'
 import axios from '../axios'
 
 function Homescreen() {
-
-  
+  useEffect(()=>{
+    axios.get('https://api.themoviedb.org/3/movie/550?api_key=30cb7a1b9a94ce47f4e0053e7c86a250').then(r => console.log(r)).catch(e=> console.log(e))
+  } ,[])
 
 
   return (

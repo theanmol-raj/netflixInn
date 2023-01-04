@@ -6,10 +6,7 @@ import requests from '../Requests'
 import axios from '../axios'
 
 function Homescreen() {
-
   
-
-
   return (
     <div>
         <Navbar />

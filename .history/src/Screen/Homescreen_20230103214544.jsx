@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Banner from '../Components/Banner'
 import Navbar from '../Components/Navbar'
 import Row from '../Components/Row'
 import requests from '../Requests'
-import axios from '../axios'
 
 function Homescreen() {
-
-  
-
-
   return (
     <div>
         <Navbar />
