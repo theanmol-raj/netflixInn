@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Homescreen from "./Screen/Homescreen";
 import LoginScreen from "./Screen/LoginScreen";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from './Firebase'
 
 
@@ -13,7 +13,7 @@ function App() {
 
   const schema = {email : "" , pass : ""} ;
   const [ cred  ,setCred ] = useState(schema) ;
-  const [user ,setUser] = useState(true) ;
+  const [user ,setUser] = useState(null) ;
 
 
   const createUser = async () => {
@@ -28,9 +28,8 @@ function App() {
   }
 
 
-
   const loginUser = async () => {
-    await signInWithEmailAndPassword(auth, cred.email, cred.pass)
+    await createUserWithEmailAndPassword(auth, cred.email, cred.pass)
     .then(userCredential => {
       const u = userCredential.user;
       setUser(u)
@@ -44,8 +43,8 @@ function App() {
   return (
     <div className="App bg-black">
         <Routes>
-          <Route path="/" element={ user ? <Homescreen /> : <LoginScreen Cred={setCred} /> } />
-          <Route path="/login" element={<LoginScreen Cred={setCred} />} />
+          <Route path="/" element={ user? <Homescreen /> : <LoginScreen /> } />
+          <Route path="/login" element={<LoginScreen/>} />
         </Routes>
     </div>
   );

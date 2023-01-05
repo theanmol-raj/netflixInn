@@ -24,7 +24,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     <div className=" bg-black">
       <h1 className=" text-white text-2xl font-semibold">{title}</h1>
       
-      <div className=" flex overflow-x-scroll scrollbar-hide overflow-y-hidden py-4 space-x-4 ">
+      <div className=" flex overflow-x-scroll scrollbar-hide overflow-y-hidden p-4 space-x-4 ">
       <div className={` bg-gradient-to-l from-black via-transparent to-transparent absolute z-10 right-0 w-12 ${isLargeRow?"h-[250px]":"h-[150px]"} `}>.</div>
         {movies?.map((movie ,index) => (
             <img key={index} src={base_url + movie.poster_path || movie.backdrop_path

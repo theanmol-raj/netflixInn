@@ -22,6 +22,7 @@ function Homescreen() {
         <Navbar />
         <Banner />
         <div className=' max-w-[100rem] mx-auto py-12 relative overflow-y-hidden'>
+        <div className=' h-full bg-red-500 absolute w-12 z-20 right-0' >kj</div>
         <Row title={"Netflix Orignals"} fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}  />
         <Row title={"Trending"} fetchUrl={requests.fetchTrending}  />
         <Row title={"Top Rated"} fetchUrl={requests.fetchTopRated} />

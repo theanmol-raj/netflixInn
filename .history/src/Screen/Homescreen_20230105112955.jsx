@@ -8,7 +8,7 @@ import axios from '../axios'
 function Homescreen() {
   useEffect(()=>{
     async function ft(){
-      await axios.get("/movie/297762/videos?api_key=a93b322b42e053f2037296980a90a436&language=en-US")
+      await axios.get("/movie/119051/videos?api_key=a93b322b42e053f2037296980a90a436&language=en-US")
       .then(res=>console.log(res)).catch(er => console.log(er))
     }
 
@@ -21,7 +21,7 @@ function Homescreen() {
     <div>
         <Navbar />
         <Banner />
-        <div className=' max-w-[100rem] mx-auto py-12 relative overflow-y-hidden'>
+        <div className=' max-w-[100rem] mx-auto py-12'>
         <Row title={"Netflix Orignals"} fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}  />
         <Row title={"Trending"} fetchUrl={requests.fetchTrending}  />
         <Row title={"Top Rated"} fetchUrl={requests.fetchTopRated} />
@@ -31,7 +31,6 @@ function Homescreen() {
         <Row title={"Documentries"} fetchUrl={requests.fetchDocumentaries} />
         <Row title={"Horror"} fetchUrl={requests.fetchHorrorMovies} />
         {/* <Row title={"Sci-Fi"} fetchUrl={requests.} /> */}
-        <div className=' h-40 bg-green-400' />
         </div>
 
     </div>

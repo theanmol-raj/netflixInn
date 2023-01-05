@@ -21,7 +21,8 @@ function Homescreen() {
     <div>
         <Navbar />
         <Banner />
-        <div className=' max-w-[100rem] mx-auto py-12 relative overflow-y-hidden'>
+        <div className=' max-w-[100rem] mx-auto py-12'>
+        <div className=' h-full bg-red-500 absolute w-25' />
         <Row title={"Netflix Orignals"} fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}  />
         <Row title={"Trending"} fetchUrl={requests.fetchTrending}  />
         <Row title={"Top Rated"} fetchUrl={requests.fetchTopRated} />
@@ -31,7 +32,6 @@ function Homescreen() {
         <Row title={"Documentries"} fetchUrl={requests.fetchDocumentaries} />
         <Row title={"Horror"} fetchUrl={requests.fetchHorrorMovies} />
         {/* <Row title={"Sci-Fi"} fetchUrl={requests.} /> */}
-        <div className=' h-40 bg-green-400' />
         </div>
 
     </div>

@@ -24,7 +24,7 @@ function LoginScreen({Cred}) {
             </div>
              {/* downside */}
              <div className='text-slate-500 space-y-2 pt-4 font-semibold'>
-                <p >{signup ? "New to Netflix " : "Already have an Account "} ?<button onClick={()=> setSignUp(!signup)} className=' text-white pl-1 hover:underline cursor-pointer'>{signup ? " Sign Up" : " Sign In"} Now</button></p>
+                <p >{signup ? "New to Netflix ?" : "Already have an Account ?"} ?<button onClick={()=> setSignUp(!signup)} className=' text-white hover:underline cursor-pointer'>{signup ? "Sign Up" : "Sign In"} Now</button></p>
                 <p>This page is protected by Google <br/>reCaptche to ensure you are not a bot.<br/><span className='text-blue-800'>Learn More</span></p>
              </div>
        </div>
