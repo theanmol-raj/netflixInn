@@ -4,7 +4,7 @@ import requestss from "../Requests";
 
 function Banner() {
   const [movies, setMovies] = useState(null);
-  const authcheck = "hjbgbfuhsgfshgf8959" ;
+  const authcheck = "kljnwhw%kjndlknnjhbd#$!6883978964bkewjfxm2dngv" ;
   
   const base_url = "https://image.tmdb.org/t/p/original";
   useEffect(()=>{

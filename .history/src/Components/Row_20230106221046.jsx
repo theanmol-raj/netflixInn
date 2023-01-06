@@ -30,8 +30,8 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
       <div className={` bg-gradient-to-l from-black via-transparent to-transparent absolute z-10 right-0 w-12 ${isLargeRow?"h-[250px]":"h-[150px]"} `}>.</div>
         {movies?.map((movie ,index) => (
             <div key={index} className={` ${isLargeRow ? "h-[250px] hover:scale-110" : "h-[150px] hover:scale-105"} w-[350px]  object-contain transition transform hover:scale-105 cursor-pointer duration-300 ease-in-out  `}>
-              <a href={`/watch/${movie?.id}/${authcheck}`}>
-              <img className={` ${isLargeRow ? "h-[250px] hover:scale-110" : "h-[150px] hover:scale-105"} w-[350px]  object-contain transition transform hover:scale-105 cursor-pointer duration-300 ease-in-out  `}  src={base_url + movie.poster_path || movie.backdrop_path
+              <a href={`/watch/${movies?.id}/${authcheck}`}>
+              <img  src={base_url + movie.poster_path || movie.backdrop_path
 }  />
               </a>
             </div>

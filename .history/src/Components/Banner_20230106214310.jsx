@@ -4,7 +4,7 @@ import requestss from "../Requests";
 
 function Banner() {
   const [movies, setMovies] = useState(null);
-  const authcheck = "hjbgbfuhsgfshgf8959" ;
+  const authcheck = "kljnwhw%kjndlknnjhbd#$!6883978964bkewjfxm2dngv" ;
   
   const base_url = "https://image.tmdb.org/t/p/original";
   useEffect(()=>{
@@ -40,7 +40,7 @@ function Banner() {
           <p>{truncate(movies?.overview , 150)
 }</p>
           <div className=" flex space-x-3 mt-4">
-            <a href={`/watch/${movies?.id}/${authcheck}`} className=" bg-white text-gray-700 px-6 py-1 font-bold">
+            <a href={`/watch/${movies?.id}/${authcheck}/watch`} className=" bg-white text-gray-700 px-6 py-1 font-bold">
               Play
             </a>
             <button className=" bg-gray-800 px-6 py-1 font-bold">

@@ -23,7 +23,7 @@ function LoginScreen({Cred ,SCred ,handle}) {
          <input onChange={handleChange} name='email' value={Cred.email}  placeholder='Email or Phone Number' className='text-slate-400 font-semibold bg-zinc-700 px-4 py-2 rounded-md w-[22rem]'/>
          <input onChange={handleChange} name='pass' value={Cred.pass} type="password"  placeholder='Password' className='text-slate-400 font-semibold bg-zinc-700 px-4 py-2 rounded-md w-[22rem]'/>
           <div className='flex flex-col space-y-2 text-gray-600'>
-            <button onClick={()=>{signup ? handle.createUser() : handle.loginUser() }}  className='text-white bg-red-600 px-4 py-3 rounded-md w-[22rem] font-bold'>{signup ? "Sign Up" : "Sign In"}</button>
+            <button onClick={()=>{signup ? handle.createUser() : handle.loginUSer() }}  className='text-white bg-red-600 px-4 py-3 rounded-md w-[22rem] font-bold'>{signup ? "Sign Up" : "Sign In"}</button>
             <div className='flex justify-between text-xs text-slate-300'>
                 <p>Remember Me </p>
                 <p>Need Help</p>

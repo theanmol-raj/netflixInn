@@ -4,7 +4,6 @@ import Homescreen from "./Screen/Homescreen";
 import LoginScreen from "./Screen/LoginScreen";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from './Firebase'
-import WatchMovie from "./Screen/WatchMovie";
 
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
 
   const schema = {email : "" , pass : ""} ;
   const [ cred  ,setCred ] = useState(schema) ;
-  const [user ,setUser] = useState(true) ;
+  const [user ,setUser] = useState(null) ;
 
 
   const createUser = async () => {
@@ -45,7 +44,6 @@ function App() {
   return (
     <div className="App bg-black">
         <Routes>
-          <Route path="/watch/:movieid/:auth" element={<WatchMovie />} />
           <Route path="/" element={ user ? <Homescreen /> : <LoginScreen handle={{createUser ,loginUser}} Cred={cred} SCred={setCred} /> } />
           <Route path="/login" element={<LoginScreen Cred={setCred} />} />
         </Routes>
